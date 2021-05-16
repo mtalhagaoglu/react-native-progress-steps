@@ -2,10 +2,13 @@ import React from 'react';
 import { View } from 'react-native';
 
 const ProgressButtons = props => (
-  <View style={{ flexDirection: 'row', marginTop: 90 }}>
-    <View style={{ position: 'absolute', left: 60, bottom: 40 }}>{props.renderPreviousButton()}</View>
-    <View style={{ position: 'absolute', right: 60, bottom: 40 }}>{props.renderNextButton()}</View>
-  </View>
+<SafeAreaView style={{ flexDirection: 'row', paddingHorizontal: 20, paddingVertical: 10 }}>
+<View style={{ flexGrow: 1, alignItems: 'flex-start' }}>
+  {props.renderPreviousButton()}
+ </View>
+<View style={{ flexGrow: 1, alignItems: 'flex-end' }}>{props.renderNextButton()}
+</View>
+</SafeAreaView>
 );
 
 export default ProgressButtons;
