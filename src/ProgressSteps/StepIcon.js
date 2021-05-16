@@ -159,7 +159,7 @@ class StepIcon extends Component {
             )}
           </Text>
         </View>
-        <Text style={styles.labelText}>{this.props.label}</Text>
+        <Text style={styles.labelText}>{this.props.label.replace(" ","\n")}</Text>
         {!this.props.isFirstStep && <View style={styles.leftBar} />}
         {!this.props.isLastStep && <View style={styles.rightBar} />}
       </View>
